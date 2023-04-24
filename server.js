@@ -3,6 +3,7 @@ const logger = require('morgan');
 const indexRoutes = require('./routes/index');
 const bookRoutes = require('./routes/books');
 const reviewRoutes = require('./routes/reviews');
+const userRoutes = require('./routes/users');
 
 //initialize express application
 const app = express();
@@ -23,6 +24,7 @@ app.use(express.static('public'));
 app.use('/', indexRoutes);
 app.use('/', reviewRoutes);
 app.use('/books', bookRoutes);
+app.use('/users', userRoutes);
 
 app.listen(3000, () => {
     console.log('app is listening on port: 3000');
