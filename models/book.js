@@ -27,6 +27,7 @@ const bookSchema = new Schema ({
     },
     genre: {
         type: String,
+        enum: ['Adventure/Fantasy', 'Fiction', 'Nonfiction', 'Young Adult', 'Personal Development', 'Mystery/Thriller', 'Biography/Memoir', 'Children and Toddlers'],
         required: true
     },
     imageUrl: {
