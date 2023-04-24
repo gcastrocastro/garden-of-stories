@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <form action="/books" method="POST">
+        <label>
+            Title:
+            <input type="text" name="title">
+        </label><br>
+        <label>
+            Author:
+            <input type="text" name="author">
+        </label><br>
+        <label>
+            Genre:
+            <select name="genre">
+                <option value="Adventure/Fantasy">Adventure/Fantasy</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Nonfiction">Nonfiction</option>
+                <option value="Young Adult">Young Adult</option>
+                <option value="Personal Development">Personal Development</option>
+                <option value="Mystery/Thriller">Mystery/Thriller</option>
+                <option value="Biography/Memoir">Biography/Memoir</option>
+                <option value="Children and Toddlers">Children and Toddlers</option>
+            </select>
+        </label><br>
+        <label>
+            ImageUrl:
+            <input type="text" name="imageUrl">
+        </label><br>
+        <label>
+            Age Range:
+            <select name="mpaaRating">
+                <option value="0-10">0-10</option>
+                <option value="11-18">11-18</option>
+                <option value="18+">18+</option>
+            </select>
+        </label><br>
+        <button type="submit">Add Movie</button>
+    </form>
+    <%- include('../partials/footer') %>
+</body>
+</html>
