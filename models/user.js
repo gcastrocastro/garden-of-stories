@@ -17,7 +17,7 @@ const userSchema = new Schema ({
         type: String,
         required: true
     },
-    favoriteGenres: [{
+    favoriteGenre: [{
         type: String,
         enum: ['Adventure/Fantasy', 'Fiction', 'Nonfiction', 'Young Adult', 'Personal Development', 'Mystery/Thriller', 'Biography/Memoir', 'Children and Toddlers']
     }],

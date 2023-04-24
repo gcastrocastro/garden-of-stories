@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Henny+Penny&family=Poiret+One&display=swap');
+
+:root {
+    --yellow-color: #e9c46a;
+    --coral-color: #f4a261;
+    --orange-color: #e76f51;
+    --light-green-color: #606c38;
+    --dark-green-color: #283618;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background: var(--dark-green-color);
+}
+
+header h1 {
+    font-family: 'Henny Penny', cursive;
+    color: var(--yellow-color);
+    font-size: 2.3rem;
+}
+
+nav {
+    font-family: 'Bad Script', cursive;
+    align-self: center;
+    margin-right: 10vmin;
+}
+
+nav > a {
+    padding: 2vmin;
+    text-decoration: none;
+    color: var(--yellow-color);
+    font-size: 1.2rem;
+    transition: 1s;
+}
+
+/* nav > a:hover{
+    color:#f4a261;
+    transform: scale(1.6);
+} */
