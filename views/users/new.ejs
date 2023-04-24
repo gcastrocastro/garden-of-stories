@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <form action="/users" method="POST">
+        <label>
+            Username:
+            <input type="text" name="username">
+        </label><br>
+        <label>
+            Email:
+            <input type="text" name="email">
+        </label><br>
+        <label>
+            Password:
+            <input type="text" name="password">
+        </label><br>
+        <label>
+            Favorite Genre:
+            <select name="favoriteGenre">
+                <option value="Adventure/Fantasy">Adventure/Fantasy</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Nonfiction">Nonfiction</option>
+                <option value="Young Adult">Young Adult</option>
+                <option value="Personal Development">Personal Development</option>
+                <option value="Mystery/Thriller">Mystery/Thriller</option>
+                <option value="Biography/Memoir">Biography/Memoir</option>
+                <option value="Children and Toddlers">Children and Toddlers</option>
+            </select>
+        </label><br>
+            Age Range:
+            <select name="ageRange">
+                <option value="0-10">0-10</option>
+                <option value="11-18">11-18</option>
+                <option value="18+">18+</option>
+            </select>
+        </label><br>
+        <button type="submit">Add New User</button>
+    </form>
+    <%- include('../partials/footer') %>
+</body>
+</html>
