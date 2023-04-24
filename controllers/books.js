@@ -1,5 +1,9 @@
 const Book = require('../models/book');
 
+function newBook (req, res) {
+    res.render('books/new', {title: "Enter a new Book"});
+}
+
 async function index (req, res) {
     try {
         const allBooks = Book.find({});
@@ -13,5 +17,6 @@ async function index (req, res) {
 }
 
 module.exports = {
-    index
+    index,
+    new: newBook
 }
