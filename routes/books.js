@@ -8,4 +8,7 @@ router.get('/', booksController.index);
 //GET /new -->  new book view route
 router.get('/new', booksController.new);
 
+//POST /books  --> create new book
+router.post('/', booksController.create);
+
 module.exports = router;
