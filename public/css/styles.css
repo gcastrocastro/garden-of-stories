@@ -23,7 +23,7 @@ header {
 header h1 {
     font-family: 'Henny Penny', cursive;
     color: var(--yellow-color);
-    font-size: 2.3rem;
+    font-size: 2.3vmin;
 }
 
 nav {
@@ -36,7 +36,7 @@ nav > a {
     padding: 2vmin;
     text-decoration: none;
     color: var(--yellow-color);
-    font-size: 1.2rem;
+    font-size: 1.2vmin;
     transition: 1s;
 }
 
@@ -44,3 +44,46 @@ nav > a {
     color:#f4a261;
     transform: scale(1.6);
 } */
+
+#newbook {
+    /* box-sizing: border-box; */
+    padding: 2vmin;
+    border-radius: .2vmin;
+    /* background-color: #e9c56aa1; */
+    /* border: 4px solid #e9c46a; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5vmin; 
+}
+
+#newuser {
+    box-sizing: border-box;
+    padding: 2vmin;
+    border-radius: .2vmin;
+    background-color: #e9c56aa1;
+    border: 4px solid #e9c46a;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5vmin; 
+}
+
+#nu-body {
+   background-color: #283618;
+   
+}
+
+#nb-body {
+    background: rgb(40,54,24);
+    background: linear-gradient(90deg, rgba(40,54,24,1) 0%, rgba(96,108,56,1) 33%, rgba(244,162,97,1) 83%);
+    
+ }
+
+ #newbook-btn {
+    margin-top: 2vmin;
+    width: 20vmin;
+    height: 5vmin;
+    padding: 2vmin;
+    font-size: 2vmin;
+    border: 1vmin ridge rgba(214, 49, 3, 0.901);
+    color: black;
+ }

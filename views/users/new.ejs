@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head') %>
-<body>
+<body id="nu-body">
     <%- include('../partials/header') %>
-    <form action="/users" method="POST">
+    <form action="/users" method="POST" id="newuser">
         <label>
             Username:
             <input type="text" name="username">
@@ -29,6 +29,7 @@
                 <option value="Children and Toddlers">Children and Toddlers</option>
             </select>
         </label><br>
+        <label>
             Age Range:
             <select name="ageRange">
                 <option value="0-10">0-10</option>
