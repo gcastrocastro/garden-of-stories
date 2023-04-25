@@ -3,9 +3,36 @@
 <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header') %>
-    <!--  -->
     <section>
-        
+        <div id="book_container">
+            <img src="<%=book.imageUrl %>" alt="<%=book.title%>"/>
+            <div class="book_details">
+                <h3>Title: <%= book.title %></h3>
+                <h3>Author: <%= book.author %></h3>
+                <h3>Genre: <%= book.genre %></h3>
+                <h3>Age Range: <%= book.ageRange %></h3>
+            </div>
+        </div>
+        <div class="reviews">
+            <form action="/books/<%= book._id %>/reviews" method="POST">
+                <label>
+                    Review:
+                    <textarea name="content" cols="30" rows="10" required></textarea>
+                </label>
+                <label>
+                    Rating
+                    <select name="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5" selected>5</option>
+                    </select>
+                </label>
+                <input type="submit" value="Add Review">
+            </form>
+            <!-- ADD REVIEW AREA -->
+        </div>
     </section>
     <%- include('../partials/footer') %>
 </body>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Henny+Penny&family=Poiret+One&display=swap');
 
+/* CONSTANTS */
 :root {
     --yellow-color: #e9c46a;
     --coral-color: #f4a261;
@@ -8,39 +9,116 @@
     --dark-green-color: #283618;
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin:0;
 }
 
+/* NAVIGATION STYLES */
+
 header {
     display: flex;
     justify-content: space-between;
     background: var(--dark-green-color);
+    padding: 10px;
 }
 
-header h1 {
+header a {
     font-family: 'Henny Penny', cursive;
     color: var(--yellow-color);
     font-size: 2.3rem;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-nav {
+header a:hover {
+    transform: scale(0.95);
+}
+
+header nav a {
     font-family: 'Bad Script', cursive;
-    align-self: center;
     margin-right: 10vmin;
 }
 
+header nav{
+    align-self: center;
+}
+
 nav > a {
-    padding: 2vmin;
+    padding: 1.5vmin;
     text-decoration: none;
     color: var(--yellow-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     transition: 1s;
 }
 
-/* nav > a:hover{
-    color:#f4a261;
-    transform: scale(1.6);
-} */
+/* ALL BOOKS VIEW STYLES */
+
+.book_container{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(2);
+}
+
+.individual_book {
+    border: #606c38 solid 2px;
+    background-color: var(--light-green-color);
+    text-align: center;
+    padding: 1rem;
+    transition: 1.5s;
+}
+
+.individual_book a img {
+    border-radius: 10px;
+    height: 250px;
+    width: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.individual_book a img:hover{
+    transform: scale(1.1);
+}
+
+.individual_book a {
+    font-family: 'Bad Script', cursive;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--yellow-color);
+}
+
+.individual_book a:hover{
+    color: var(--dark-green-color);
+}
+
+/* SHOW STYLES */
+
+section {
+    height: 100vh;
+    background-color: var(--yellow-color);
+}
+
+#book_container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#book_container img{
+    height: 400px;
+    width: auto;
+}
+
+.book_details {
+    font-family: 'Bad Script', cursive;
+}
+
+/* FOOTER STYLES */
+
+footer{
+    background-color:#283618;
+    color: var(--yellow-color);
+    font-family: 'Bad Script', cursive;
+    text-align: center;
+    padding: 5px;
+}
