@@ -1,8 +1,16 @@
 <header>
     <a href="/">Garden of Stories</a>
     <nav>
-        <a href="/books">All Books</a>
+        <!-- <a href="/books">All Books</a>
         <a href="/books/new">Add A New Book</a>
-        <a href="/users/new">Add a New User</a>
+        <a href="/users/new">Add a New User</a> -->
+        <a href="/books" <%- title === 'All Books' ? 'class="active"' : '' %>>All Books</a>
+        <% if (user) { %>
+        <a href="/books/new" <%- title === 'Add New Book' ? 'class="active"' : '' %>>
+		Add New Book</a>
+        <a href="/logout">LOG OUT</a>
+        <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"/></a>
+        <% } %>
     </nav>
 </header>

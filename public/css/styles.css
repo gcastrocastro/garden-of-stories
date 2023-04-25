@@ -15,6 +15,17 @@
     margin:0;
 }
 
+/* LOGIN STYLES */
+
+.login {
+    text-align: center;
+}
+
+.login img {
+  height: 30px;
+  padding-top: 5px;
+}
+
 /* NAVIGATION STYLES */
 
 header {
