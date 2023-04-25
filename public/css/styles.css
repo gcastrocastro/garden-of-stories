@@ -59,11 +59,11 @@ nav > a {
     display: grid;
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(2);
+    background-color: var(--light-green-color);
 }
 
 .individual_book {
     border: #606c38 solid 2px;
-    background-color: var(--light-green-color);
     text-align: center;
     padding: 1rem;
     transition: 1.5s;
@@ -105,12 +105,16 @@ section {
 }
 
 #book_container img{
+    margin-top: 2rem;
+    margin-right: 1rem;
     height: 400px;
     width: auto;
+    border:#283618 solid 2px;
 }
 
-.book_details {
+.book_details h3{
     font-family: 'Bad Script', cursive;
+    font-size: 2rem;
 }
 
 /* FOOTER STYLES */
