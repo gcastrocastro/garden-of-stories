@@ -3,7 +3,8 @@
 <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header') %>
-    <form action="/books" method="POST">
+    <div id="nb-body">
+    <form action="/books" method="POST" id="newbook">
         <label>
             Title:
             <input type="text" name="title">
@@ -37,8 +38,9 @@
                 <option value="18+">18+</option>
             </select>
         </label><br>
-        <button type="submit">Add New Book</button>
+        <button type="submit" id="newbook-btn">Add New Book</button>
     </form>
+</div>
     <%- include('../partials/footer') %>
 </body>
 </html>
