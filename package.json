@@ -1,7 +1,7 @@
 {
   "name": "garden-of-stories",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Book Review Blog",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/gcastrocastro/garden-of-stories.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gabriela Castro and Summer Boatwright",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gcastrocastro/garden-of-stories/issues"

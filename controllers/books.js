@@ -6,7 +6,7 @@ function newBook (req, res) {
 
 async function index (req, res) {
     try {
-        const allBooks = Book.find({});
+        const allBooks = await Book.find({});
         res.render('books/index', {
             books: allBooks,
             title: 'All Books'
@@ -18,7 +18,6 @@ async function index (req, res) {
 
 async function create(req, res) {
     try {
-        console.log(req.body);
         const book = await Book.create(req.body);
         res.redirect(`/books/${book._id}`);
     } catch (error){
@@ -28,10 +27,9 @@ async function create(req, res) {
 
 async function show (req, res) {
     try {
-        const foundBook = Book.findById(req.params.id);
-        console.log(foundBook);
+        const foundBook = await Book.findById(req.params.id);
         res.render('books/show', { 
-            movie: foundBook, 
+            book: foundBook, 
             title: 'See Book Details', 
         });
     }catch (error){
