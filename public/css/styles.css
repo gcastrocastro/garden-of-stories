@@ -155,13 +155,6 @@ table, th, td{
     letter-spacing: 1px;
 }
 
-/* td img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin: 2px 5px 2px 2px;
-} */
-
 .rating_dropdown {
     width: 10vmin;
     height: 6vmin;
@@ -179,14 +172,29 @@ table, th, td{
     color: var(--yellow-color);
     border: 1px solid var(--dark-green-color);
     border-radius: 4vmin;
-    font-size: 3vmin;
+    font-size: 2vmin;
     padding: 2vmin;
     cursor: pointer;
-    transform: scale(.8);
+    margin-left: 10px;
 }
 
 .rating_btn:hover{
     background-color: var(--dark-green-color);
+}
+
+#delete_btn{
+    width: 30px;
+    height: auto;
+    background-color: var(--light-green-color);
+    color: var(--yellow-color);
+    border: 1px solid var(--dark-green-color);
+    padding: 1vmin;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#delete_btn:hover{
+    transform: scale(.8);
 }
 
 /* INPUT FORM FOR NEW BOOK */

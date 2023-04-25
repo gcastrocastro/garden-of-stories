@@ -6,6 +6,7 @@ const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users');
 const session = require('express-session');
 const passport = require('passport');
+const methodOverride = require('method-override');
 
 //initialize express application
 const app = express();
@@ -23,6 +24,7 @@ require('./config/passport');
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false })); 
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
 app.use(session({
     secret: process.env.SECRET,
     resave: false,

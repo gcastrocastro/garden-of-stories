@@ -17,6 +17,15 @@ async function create(req, res) {
     }
 }
 
+async function deleteReview(req, res) {
+  const foundBook = await Book.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
+  if (!foundBook) return res.redirect('/books');
+  foundBook.reviews.remove(req.params.id);
+  await foundBook.save();
+  res.redirect(`/books/${foundBook._id}`);
+}
+
 module.exports = {
-    create
+    create,
+    delete: deleteReview
 }
