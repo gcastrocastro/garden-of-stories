@@ -48,11 +48,11 @@ nav > a {
 #newbook {
     padding: 2vmin;
     border-radius: .2vmin;
-    /* background-color: #e9c56aa1; */
-    /* border: 4px solid #e9c46a; */
+    background-color: #e9c56aa1;
+    border: 4px solid #e9c46a;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3.5vmin; 
+    gap: 2.5vmin; 
 }
 
 #newuser {
@@ -74,17 +74,20 @@ nav > a {
 }
 
 #nb-body {
-    background: rgb(40,54,24);
-    background: linear-gradient(90deg, rgba(40,54,24,1) 0%, rgba(96,108,56,1) 33%, rgba(244,162,97,1) 83%);
-    
+    background-color: #283618;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
  }
 
  #newbook-btn {
     margin-top: 2vmin;
-    width: 20vmin;
+    width: 15vmin;
     height: 5vmin;
     padding: 2vmin;
-    font-size: 2vmin;
-    border: 1vmin ridge rgba(214, 49, 3, 0.901);
-    color: black;
+    font-size: 1.5vmin;
+    text-align: justify;
+    border: .5vmin solid rgba(226, 223, 223, 0.901);
+    
  }

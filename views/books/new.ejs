@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head') %>
-<body id="nb-body">
+<body>
     <%- include('../partials/header') %>
+    <div id="nb-body">
     <form action="/books" method="POST" id="newbook">
         <label>
             Title:
@@ -39,6 +40,7 @@
         </label><br>
         <button type="submit" id="newbook-btn">Add New Book</button>
     </form>
+</div>
     <%- include('../partials/footer') %>
 </body>
 </html>
