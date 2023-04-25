@@ -46,7 +46,6 @@ nav > a {
 } */
 
 #newbook {
-    /* box-sizing: border-box; */
     padding: 2vmin;
     border-radius: .2vmin;
     /* background-color: #e9c56aa1; */
@@ -57,7 +56,6 @@ nav > a {
 }
 
 #newuser {
-    box-sizing: border-box;
     padding: 2vmin;
     border-radius: .2vmin;
     background-color: #e9c56aa1;
@@ -69,7 +67,10 @@ nav > a {
 
 #nu-body {
    background-color: #283618;
-   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 90vh;
 }
 
 #nb-body {

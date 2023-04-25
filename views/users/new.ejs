@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head') %>
-<body id="nu-body">
+<body> 
     <%- include('../partials/header') %>
+    <div id="nu-body">
     <form action="/users" method="POST" id="newuser">
         <label>
             Username:
@@ -39,6 +40,7 @@
         </label><br>
         <button type="submit">Add New User</button>
     </form>
+</div>
     <%- include('../partials/footer') %>
 </body>
 </html>
