@@ -105,17 +105,72 @@ section {
 }
 
 #book_container img{
-    margin-top: 2rem;
-    margin-right: 1rem;
+    margin: 5vmin 5vmin 5vmin 5vmin;
     height: 400px;
-    width: auto;
     border:#283618 solid 2px;
 }
 
-.book_details h3{
+.book_details{
     font-family: 'Bad Script', cursive;
-    font-size: 2rem;
+    font-size: 1.3rem;
+    margin-right: 6vmin;
 }
+
+/* SHOW REVIEW STYLES */
+.reviews {
+    margin-right: 5vmin;
+    max-width: 50%;
+    font-family: 'Poiret One', cursive;
+    font-size: 3vmin;
+}
+
+#review-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#review-form textarea{
+    width: 400px;
+    height: 6vmin;
+}
+
+table, th, td{
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+.rating_dropdown {
+    width: 10vmin;
+    height: 6vmin;
+    border: 2px solid var(--yellow-color);
+    font-size: 3vmin;
+    color: var(--yellow-color);
+    background-color: var(--light-green-color);
+    border-radius: 5px;
+    text-align: center;
+    /* box-shadow: 4px 4px #ccc; */
+}
+
+.rating_btn{
+    background-color: var(--light-green-color);
+    font-family: 'Poiret One', cursive;
+    color: var(--yellow-color);
+    border: 1px solid var(--dark-green-color);
+    border-radius: 4vmin;
+    font-size: 3vmin;
+    padding: 2vmin;
+    cursor: pointer;
+    transform: scale(.8);
+}
+
+.rating_btn:hover{
+    background-color: var(--dark-green-color);
+
+}
+
 
 /* FOOTER STYLES */
 
