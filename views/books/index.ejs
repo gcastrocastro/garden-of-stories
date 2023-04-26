@@ -3,16 +3,28 @@
 <%- include('../partials/head') %>
 <body>
 <%- include('../partials/header') %>
-<div class="book_container">
-    <% books.forEach((b) => { %>
-        <div class="individual_book">
-            <a href="/books/<%= b._id %>">
-                <img src="<%= b.imageUrl%>" alt="<%=b.title%>" />
-                <p><%= b.title %></p>
-            </a>
+    <section>
+        <div class="book_container">
+            <% books.forEach((b) => { %>
+                <div class="individual_book">
+                    <a href="/books/<%= b._id %>">
+                        <img src="<%= b.imageUrl%>" alt="<%=b.title%>" />
+                        <p><%= b.title %></p>
+                    </a>
+                </div>
+            <% }) %>
         </div>
-    <% }) %>
-</div>
+    </section>
 <%- include('../partials/footer') %>
+<script>
+    const sections = document.querySelectorAll(".individual_book");
+    console.log(sections);
+    
+    sections.forEach(section => {
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    console.log(randomColor);
+    section.style.backgroundColor = `#${randomColor}`;
+    })
+</script>
 </body>
 </html>

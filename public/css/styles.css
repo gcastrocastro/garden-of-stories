@@ -7,6 +7,7 @@
     --orange-color: #e76f51;
     --light-green-color: #606c38;
     --dark-green-color: #283618;
+    --random-colors: #FF5733, #FFC300, #DAF7A6, #A0E7E5, #FF9FF3, #C70039, #900C3F;
 }
 
 * {
@@ -33,6 +34,11 @@ header {
     justify-content: space-between;
     background: var(--dark-green-color);
     padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 header a {
@@ -66,6 +72,11 @@ nav > a {
 
 /* ALL BOOKS VIEW STYLES */
 
+section{
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
 .book_container{
     display: grid;
     grid-template-columns: repeat(5, 20%);
@@ -74,7 +85,6 @@ nav > a {
 }
 
 .individual_book {
-    border: #606c38 solid 2px;
     text-align: center;
     padding: 1rem;
     transition: 1.5s;
@@ -102,17 +112,25 @@ nav > a {
     color: var(--dark-green-color);
 }
 
-/* SHOW STYLES */
+/* HOME PAGE STYLES */
 
-section {
+main {
+    background: url('../imgs/gardencat.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
-    background-color: var(--yellow-color);
+    padding-top: 80px;
 }
+
+/* SHOW STYLES */
 
 #book_container{
     display:flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--yellow-color);
+    height: 90vh;
 }
 
 #book_image{
@@ -133,7 +151,7 @@ section {
     margin-right: 5vmin;
     max-width: 50%;
     font-family: 'Poiret One', cursive;
-    font-size: 3vmin;
+    font-size: 2vmin;
 }
 
 #review-form{
@@ -251,6 +269,10 @@ table, th, td{
 /* FOOTER STYLES */
 
 footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color:#283618;
     color: var(--yellow-color);
     font-family: 'Bad Script', cursive;
