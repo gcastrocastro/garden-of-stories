@@ -6,8 +6,10 @@ function newBook (req, res) {
 
 async function index (req, res) {
     try {
+        let search = [];
         const allBooks = await Book.find({});
         res.render('books/index', {
+            search,
             books: allBooks,
             title: 'All Books'
         })
@@ -37,9 +39,27 @@ async function show (req, res) {
     }
 }
 
+async function search (req, res) {
+    try {
+        const allBooks = await Book.find({});
+        const filter = req.query.filter;
+        const searchResult = await Book.find({ ageRange: filter});
+        console.log(allBooks);
+        console.log(searchResult);
+        res.render('books/index', {
+            search: searchResult,
+            books: allBooks,
+            title: 'All Books',
+        });
+    }catch (error){
+        res.render('error', {title: 'Something went wrong'});
+    }
+}
+
 module.exports = {
     index,
     new: newBook,
     create,
-    show
+    show,
+    search
 }

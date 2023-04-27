@@ -19,7 +19,11 @@ const reviewSchema = new Schema ({
         required: true
     },
     userName: String,
-    userAvatar: String
+    userAvatar: String,
+    editing: {
+        type: Boolean,
+        default: false
+    }
 }, {timestamps: true})
 
 
