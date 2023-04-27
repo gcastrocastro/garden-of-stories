@@ -152,6 +152,13 @@ main {
     padding-top: 80px;
 }
 
+#homepagetxt {
+    color: #1f1f1f;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.38);
+    font-size: 1.7rem;
+}
+
 /* SHOW STYLES */
 
 #book_container{
