@@ -4,16 +4,29 @@
 <body>
 <%- include('../partials/header') %>
     <section>
-        <div class="book_container">
-            <% books.forEach((b) => { %>
-                <div class="individual_book">
-                    <a href="/books/<%= b._id %>">
-                        <img src="<%= b.imageUrl%>" alt="<%=b.title%>" />
-                        <p><%= b.title %></p>
-                    </a>
-                </div>
-            <% }) %>
+        <div id="search_bar">
+            <form action="/books/search" method="GET">
+                <select id="filter" name="filter">
+                  <option value="">Age Range</option>
+                  <option value="0-10">0-10</option>
+                  <option value="11-18">11-18</option>
+                  <option value="18+">18+</option>
+                </select>
+                <button id="filter_submit"type="submit">Search</button>
+              </form>
         </div>
+       
+            <div class="book_container">
+                <% books.forEach((b) => { %>
+                    <div class="individual_book">
+                        <a href="/books/<%= b._id %>">
+                            <img src="<%= b.imageUrl%>" alt="<%=b.title%>" />
+                            <p><%= b.title %></p>
+                        </a>
+                    </div>
+                <% }) %>
+            </div>
+
     </section>
 <%- include('../partials/footer') %>
 <script>
