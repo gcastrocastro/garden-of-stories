@@ -44,6 +44,7 @@
                             <th>Review</th>
                             <th>Rating</th>
                             <% if (user) { %>
+                            <th> Edit Review </th>
                             <th>Delete Review</th>
                             <% } %>
                         </tr>
@@ -51,11 +52,28 @@
                     <tbody>
                         <% book.reviews.forEach(r => { %>
                             <tr>
+                            <form action="/books/<%= book._id %>/reviews/<%= r._id %>?_method=PUT" method="POST">
                                 <td><%= r.userName %></td>
                                 <td><%= r.createdAt.toLocaleDateString() %></td>
-                                <td><%= r.content %></td>
+                                <td>
+                                    <% if (user && r.editing) { %>
+                                            <textarea id="edit_area" name="content" rows="3" cols="40"><%= r.content %></textarea>
+                                    <% } else { %>
+                                        <%= r.content %>
+                                    <% } %>
+                                </td>
                                 <td><%= r.rating %></td>
                                 <% if (user?._id.equals(r.user)) { %>
+                                <% if (!r.editing) { %>
+                                    <td>
+                                        <button id="edit_btn" type="submit">Edit</button> 
+                                    </td>
+                                <% } else { %>
+                                    <td>
+                                        <button id="edit_btn" type="submit">Save</button>  
+                                    </td>
+                                <% } %>
+                            </form>
                                 <td>
                                     <form action="/books/<%= book._id %>/reviews/<%= r._id %>?_method=DELETE" method="POST">
                                         <button id="delete_btn" type="submit">X</button>

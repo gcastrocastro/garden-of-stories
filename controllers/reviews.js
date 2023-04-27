@@ -25,7 +25,23 @@ async function deleteReview(req, res) {
   res.redirect(`/books/${foundBook._id}`);
 }
 
+async function edit(req, res) {
+    const foundBook = await Book.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
+    const reviewIndex = foundBook.reviews.findIndex(review => review._id.toString() === req.params.id);
+    if(foundBook.reviews[reviewIndex].editing){
+        foundBook.reviews[reviewIndex].content = req.body.content;
+        foundBook.reviews[reviewIndex].editing = false;
+        await foundBook.save();
+        res.redirect(`/books/${foundBook._id}`);
+    } else {
+        foundBook.reviews[reviewIndex].editing = true;
+        await foundBook.save();
+        res.redirect(`/books/${foundBook._id}`);
+    }
+}
+
 module.exports = {
     create,
-    delete: deleteReview
+    delete: deleteReview,
+    edit
 }
