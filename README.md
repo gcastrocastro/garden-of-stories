@@ -2,8 +2,8 @@
 This is a fully functional CRUD application where users have access to a database that stores books, along with user reviews attached to each individual book.
 
 # Application Previews
-<!-- <img src="./public/imgs/homepage.png" width= "500px" alt="preview">
-<img src="./public/imgs/allbooks.png" width= "500px" alt="preview"> -->
+<img src="https://i.imgur.com/JEf4WIj.jpg" width= "500px" alt="preview">
+<img src="https://i.imgur.com/FLPPmKr.png" width= "500px" alt="preview">
 
 # Technologies Used:
 Express, MongoDB, Node.js, Mongoose, and Google Authorization
