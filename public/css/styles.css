@@ -123,6 +123,13 @@ main {
     padding-top: 80px;
 }
 
+#homepagetxt {
+    color: #1f1f1f;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.38);
+    font-size: 1.7rem;
+}
+
 /* SHOW STYLES */
 
 #book_container{
@@ -243,11 +250,6 @@ table, th, td{
     font-size: 1.5vmin;
     text-align: justify;
     border: .5vmin solid rgba(226, 223, 223, 0.901);
-    
-}
-
-#spotlight {
-    text-align: center;
     
 }
 
