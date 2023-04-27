@@ -12,10 +12,21 @@
                   <option value="11-18">11-18</option>
                   <option value="18+">18+</option>
                 </select>
-                <button id="filter_submit"type="submit">Search</button>
+                <button id="filter_submit" type="submit">Search</button>
               </form>
         </div>
-       
+        <% if (search && search.length > 0) { %>
+            <div class="book_container">
+                <% search.forEach((s) => { %>
+                    <div class="individual_book">
+                        <a href="/books/<%= s._id %>">
+                            <img src="<%= s.imageUrl%>" alt="<%=s.title%>" />
+                            <p><%= s.title %></p>
+                        </a>
+                    </div>
+                <% }) %>
+            </div>    
+        <% } else { %> 
             <div class="book_container">
                 <% books.forEach((b) => { %>
                     <div class="individual_book">
@@ -26,7 +37,7 @@
                     </div>
                 <% }) %>
             </div>
-
+            <% } %> 
     </section>
 <%- include('../partials/footer') %>
 <script>
