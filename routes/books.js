@@ -6,6 +6,9 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 // GET /books --> index route
 router.get('/', booksController.index);
 
+//GET /search --> search for specific books
+router.get('/search', booksController.search);
+
 //GET /new -->  create new book view
 router.get('/new', ensureLoggedIn, booksController.new);
 
