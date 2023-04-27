@@ -6,8 +6,10 @@ function newBook (req, res) {
 
 async function index (req, res) {
     try {
+        let search = [];
         const allBooks = await Book.find({});
         res.render('books/index', {
+            search,
             books: allBooks,
             title: 'All Books'
         })
